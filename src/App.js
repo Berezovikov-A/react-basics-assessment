@@ -4,7 +4,10 @@ import './App.css';
 
 function App() {
   return ( 
-      <Heading /> 
+    <div>
+      <Heading firstName="Bob"/> 
+      <Heading firstName="Not Bob"/> 
+    </div>
   ); 
 } 
 

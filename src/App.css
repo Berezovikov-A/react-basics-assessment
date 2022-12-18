@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -35,4 +35,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.nav-menu {
+  background-color: blueviolet;
+  padding: 10px;
+}
+
+.nav-item {
+  display: flexbox;
+  align-content: center;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  color: white;
 }

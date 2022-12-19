@@ -17,10 +17,10 @@ function App() {
         return Number(result) * Number(inputRef.current.value);
       case 'divide': 
         return Number(result) / Number(inputRef.current.value);
-      case 'input': 
+      case 'inputReset': 
         inputRef.current.value = null; 
         return result;
-      case 'result': 
+      case 'resultReset': 
         return 0;
       default:
         return result;
@@ -33,19 +33,19 @@ function App() {
     <>
       <h1>The simplest calculator</h1>
       <h2>Result: {result}</h2>      
-      <form onSubmit={(e) => e.preventDefault()}>
-        <input
+      <form className="calculator" onSubmit={(e) => e.preventDefault()}>
+        <input className="input"
           pattern="[0-9]"
           type="number" 
           ref={inputRef}
           placeholder="Type a number" 
            />
-        <button onClick={() => dispath({type: 'add'})}>add</button>
-        <button onClick={() => dispath({type: 'subtract'})}>subtract</button>
-        <button onClick={() => dispath({type: 'multiply'})}>multiply</button>
-        <button onClick={() => dispath({type: 'divide'})}>divide</button>
-        <button onClick={() => dispath({type: 'input'})}>reset input</button>
-        <button onClick={() => dispath({type: 'result'})}>reset result</button>
+        <button className="button" onClick={() => dispath({type: 'add'})}>add</button>
+        <button className="button" onClick={() => dispath({type: 'subtract'})}>subtract</button>
+        <button className="button" onClick={() => dispath({type: 'multiply'})}>multiply</button>
+        <button className="button" onClick={() => dispath({type: 'divide'})}>divide</button>
+        <button className="button reset" onClick={() => dispath({type: 'inputReset'})}>reset input</button>
+        <button className="button reset" onClick={() => dispath({type: 'resultReset'})}>reset result</button>
       </form>
     </>
   );

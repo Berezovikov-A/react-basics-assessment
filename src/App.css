@@ -37,18 +37,29 @@
   }
 }
 
-.nav-menu {
-  background-color: blueviolet;
-  padding: 10px;
+.input {
+  display: flex;
+  padding: 5px;
+  margin: 2px;
 }
 
-.nav-item {
-  display: flexbox;
-  align-content: center;
-  padding: 10px;
-  margin: 10px;
-  text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: xx-large;
+.button {
+  display: inline-flex;
+  padding: 5px;
+  margin: 2px;
+}
+
+.button.reset {
+  background-color: #FF6247;
   color: white;
+  border: solid grey 1px;
+  border-radius: 2px;
+}
+
+button.reset:hover {
+  background-color: #EB2300;
+}
+
+.button.reset:active {
+  background-color: #FFA28F;
 }
